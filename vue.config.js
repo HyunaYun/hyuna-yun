@@ -1,4 +1,4 @@
 module.exports = {
     publicPath: "/hyuna-yun/",
-    outputDir: "docs",
+    outputDir: "./docs",
 };
