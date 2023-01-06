@@ -1,4 +1,6 @@
 module.exports = {
-    publicPath: "/hyuna-yun/",
-    outputDir: "./docs",
+  publicPath: "/hyuna-yun/",
+  outputDir: "./docs",
+
+  transpileDependencies: ["vuetify"],
 };
