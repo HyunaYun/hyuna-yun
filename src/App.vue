@@ -13,7 +13,7 @@
       >{{ time }}</span>
       <span
         class="ml-4"
-        style="color: black; font-size: 17px; font-weight: 600"
+        style="color: black; font-size: 18px; font-weight: 550; padding-top: 2px"
       >{{ date }}</span>
 
       <v-spacer />
