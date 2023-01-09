@@ -5,11 +5,15 @@
       style="height: 80vh"
       justify="space-between"
     >
-      <v-spacer />
+      <v-spacer
+        hidden
+        class="d-sm-flex"
+      />
 
       <v-col
-        cols="8"
-        class="white rounded-lg"
+        cols="12"
+        sm="8"
+        class="white rounded-lg mx-sm-0 mx-3"
       >
         <v-row
           class="grey lighten-3 rounded-t-lg pl-2"
@@ -44,7 +48,10 @@
         </v-row>
       </v-col>
 
-      <v-spacer />
+      <v-spacer
+        hidden
+        class="d-sm-flex"
+      />
     </v-row>
   </div>
 </template>

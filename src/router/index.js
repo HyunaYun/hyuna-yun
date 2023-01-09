@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/hyuna-yun",
-    redirect: "/hyuna-yun/main",
+    redirect: "/hyuna-yun/login",
   },
   {
     path: "/hyuna-yun/main",

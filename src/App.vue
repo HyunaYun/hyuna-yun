@@ -32,10 +32,11 @@
       </v-icon>
     </v-system-bar>
 
-    <v-main class="px-lg-15 px-10">
+    <v-main class="px-sm-15">
       <router-view />
 
       <v-row
+        v-if="getIsUserLogin"
         style="height: 75px; background-color: white; background-color: rgba( 255, 255, 255, 0.3 );"
         class="rounded-xl"
       >
@@ -148,6 +149,12 @@ export default {
     contactLink: '',
   }),
 
+  computed: {
+    getIsUserLogin() {
+      return this.$store.getters.GET_IS_USER_LOGIN;
+    }
+  },
+
   mounted() {
     setInterval(() => {
       let date = new Date();
@@ -187,7 +194,7 @@ export default {
         break;
       case 'phone':
       case 'message':
-        this.contactMessage = '+82 01 3658 2924'
+        this.contactMessage = '+82 10 3658 2924'
         break;
       case 'instagram':
         this.contactMessage = ''
