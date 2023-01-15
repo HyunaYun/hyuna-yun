@@ -9,7 +9,7 @@
         cols="auto"
       >
         <v-img
-          src="@/assets/img/icon/profile.png"
+          src="@/assets/img/icon/main/profile.png"
           style="width: 200px; height: 200px; margin:auto; opacity: 0.95;"
           class="rounded-circle mb-5"
         />
@@ -73,7 +73,8 @@ export default {
         this.$store.commit("SET_IS_USER_LOGIN", true);
         this.$router.replace("/hyuna-yun/main");
       } else {
-        alert("비밀번호를 확인해주세요.")
+        alert("비밀번호를 확인해주세요.");
+        this.password = '';
         return;
       }
     }

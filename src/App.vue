@@ -1,35 +1,33 @@
 <template>
   <v-app
     :style="{ backgroundImage : `url(${backgroundImg})`}"
-    style="background-repeat: no-repeat; background-size: 100% 100%; overflow: hidden"
+    style="background-repeat: no-repeat; background-size: 100% 100%; overflow: hidden;"
   >
     <v-system-bar
-      lights-out
-      style="opacity: 0.3"
+      style="background-color: rgba( 255, 255, 255, 0.4 );"
     >
       <span
-        class="text-h6"
-        style="color: black"
+        style="font-size: 18px;"
       >{{ time }}</span>
       <span
         class="ml-4"
-        style="color: black; font-size: 18px; font-weight: 550; padding-top: 2px"
+        style="font-size: 17px; padding-top: 4px"
       >{{ date }}</span>
 
       <v-spacer />
 
-      <v-icon style="font-size: 23px; color: black;">
-        mdi-wifi
-      </v-icon>
+      <i
+        class="fa-solid fa-wifi"
+        style="font-size: 17px; padding-bottom: 1px; margin-right: 3px"
+      />
       <span
-        class="text-h6 mx-1"
-        style="color: black"
+        class="mx-1"
+        style="font-size: 18px;"
       > 100%</span>
-      <v-icon
-        style="transform: rotate(90deg); font-size: 27px;  color: black;"
-      >
-        mdi-battery-charging
-      </v-icon>
+      <i
+        class="fa-solid fa-battery-full"
+        style="font-size: 20px; padding-bottom: 1px;"
+      />
     </v-system-bar>
 
     <v-main class="px-sm-15">
@@ -49,7 +47,7 @@
             class="mr-4"
           >
             <v-img
-              :src="require(`@/assets/img/icon/${icon}.png`)"
+              :src="require(`@/assets/img/icon/bottom/${icon}.png`)"
               class="rounded-lg"
               style="width: 50px; height: 50px; cursor: pointer;"
               @click="showDialog(icon)"
@@ -63,7 +61,7 @@
         width="500"
       >
         <v-card>
-          <v-card-title class="text-h5">
+          <v-card-title style="font-size: 25px; font-family: apple-bold">
             Contact
           </v-card-title>
 
@@ -75,7 +73,7 @@
                 cols="3"
               >
                 <v-img
-                  :src="require(`./assets/img/icon/${contactTitle}.png`)"
+                  :src="require(`./assets/img/icon/bottom/${contactTitle}.png`)"
                   style="width: 70%;"
                 />
               </v-col>
@@ -86,7 +84,8 @@
               >
                 <div
                   v-if="contactTitle == 'email' || contactTitle == 'phone' || contactTitle == 'message'"
-                  class="text-h6 font-weight-bold"
+                  style="font-size: 21px; font-family: apple-bold; color: #393939"
+                  class="mb-2"
                 >
                   {{ contactTitle }}
                 </div>
@@ -94,13 +93,12 @@
                   <a
                     :href="contactLink"
                     target="_blank"
-                    class="text-h6"
-                    style="color: #393939; text-decoration: none;"
+                    style="color: #393939; text-decoration: none; font-size: 21px; font-family: apple-bold"
                   >{{ contactTitle }}
                     <i class="fa-solid fa-arrow-up-right-from-square" />
                   </a>
                 </div>
-                <div class="text-h6 font-weight-regular">
+                <div style="font-size: 19px;">
                   {{ contactMessage }}
                 </div>
               </v-col>
@@ -226,4 +224,19 @@ a:hover {
 .link:hover {
   color: #2D7AC4 !important;
 }
+
+.v-application {
+  font-family: 'apple-basic', sans-serif !important;
+}
+
+@font-face {
+  font-family: 'apple-basic';
+  src: url('./assets/fonts/AppleSDGothicNeoSB.ttf');
+}
+
+@font-face {
+  font-family: 'apple-bold';
+  src: url('./assets/fonts/AppleSDGothicNeoB.ttf');
+}
+
 </style>

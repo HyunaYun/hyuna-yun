@@ -23,7 +23,7 @@
             class="mr-1 mr-md-2"
           >
             <v-img
-              :src="require(`../assets/img/icon/${icon}.png`)"
+              :src="require(`../assets/img/icon/main/${icon}.png`)"
               style="width: 70px; height: 70px; cursor: pointer; background-color: white"
               class="mb-1 rounded-xl"
               @click="moveUrl(icon)"
@@ -50,7 +50,7 @@
             >
               <v-col cols="auto">
                 <v-img
-                  src="@/assets/img/icon/todo.png"
+                  src="@/assets/img/icon/main/todo.png"
                   style="width: 30px; height: 30px;"
                 />
               </v-col>
@@ -58,7 +58,7 @@
               <v-col
                 align-self="center"
               >
-                <span>To Do List</span>
+                <span style="font-size: 18px; padding-top: 5px">To Do List</span>
               </v-col>
 
               <v-spacer />
@@ -70,6 +70,7 @@
                 <i
                   class="fa-solid fa-arrow-up-right-from-square"
                   style="cursor: pointer;"
+                  @click="moveUrl('todo')"
                 />
               </v-col>
             </v-row>
@@ -78,15 +79,20 @@
 
             <v-row class="mt-1">
               <v-col
-                class="text-h5 font-weight-medium px-5 py-10 text-center"
-                cols="3"
+                class="px-5 py-10 text-center"
+                style="font-size: 30px"
+                cols="4"
               >
                 {{ new Date().getMonth() + 1 }}월 {{ new Date().getDate() }}일
               </v-col>
               <v-col align-self="center">
-                <div>list</div>
-                <div>list</div>
-                <div>list</div>
+                <div>
+                  <div>
+                    list
+                  </div>
+                  <!-- 마지막 인덱스일때 hidden -->
+                  <v-divider class="my-2" />
+                </div>
               </v-col>
             </v-row>
           </v-col>
@@ -104,7 +110,7 @@ export default {
 
   data() {
     return {
-      iconList: ['profile', 'note', 'twitter', 'map', 'dashboard', 'todo', 'app store', 'setting'],
+      iconList: ['profile', 'note', 'twitter', 'map', 'dashboard', 'todo', 'App Store', 'setting'],
     };
   },
 
