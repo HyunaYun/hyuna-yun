@@ -239,4 +239,9 @@ a:hover {
   src: url('./assets/fonts/AppleSDGothicNeoB.ttf');
 }
 
+@font-face {
+  font-family: 'apple-x-bold';
+  src: url('./assets/fonts/AppleSDGothicNeoEB.ttf');
+}
+
 </style>

@@ -16,7 +16,7 @@
         class="white rounded-lg mx-sm-0 mx-3"
       >
         <v-row
-          class="grey lighten-3 rounded-t-lg pl-2"
+          class="grey lighten-4 rounded-t-lg pl-2"
         >
           <v-col
             class="d-flex align-self-center"
@@ -27,11 +27,11 @@
               @click="close()"
             />
             <div
-              class="yellow accent-4 rounded-xl mr-2"
+              class="grey lighten-2 rounded-xl mr-2"
               style="width: 15px; height: 15px"
             />
             <div
-              class="green accent-4 rounded-xl"
+              class="grey lighten-2 rounded-xl"
               style="width: 15px; height: 15px"
             />
           </v-col>
@@ -39,7 +39,7 @@
           <v-col
             class="font-weight-medium pl-0"
           >
-            To-do List
+            Profile
           </v-col>
         </v-row>
 
